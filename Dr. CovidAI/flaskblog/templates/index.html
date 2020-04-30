@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dr. CovidAI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/animate.css')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/magnific-popup.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/ionicons.min.css')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css')}}">
+  </head>
+  <body>
+	  <div class="bg-top navbar-light" style="background-color: oldlace;">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="index.html">Dr. CovidAI</a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text">
+					    		<span>Email</span>
+						    	<span>youremail@email.com</span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <div class="text">
+						    	<span>Call</span>
+						    	<span>Call Us: + 1235</span>
+						    </div>
+					    </div>
+					    <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0 d-block">
+					    		<a href="{{url_for('login')}}" class="btn py-2 px-3 btn-primary">
+					    			<span>Login</span>
+					    		</a>
+					    	</p>
+					    </div>
+					    <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0 d-block">
+					    		<a href="{{url_for('register')}}" class="btn py-2 px-3 btn-primary">
+					    			<span>Register</span>
+					    		</a>
+					    	</p>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" placeholder="Search">
+            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+          </div>
+        </form>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item active"><a href="{{url_for('home')}}" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="{{url_for('screeningtool')}}" class="nav-link">Screening Tool</a></li>
+	        	<li class="nav-item"><a href="{{url_for('pooling')}}" class="nav-link">Pooled Blood Test</a></li>
+	        	<li class="nav-item"><a href="/static/covidpredict.html" class="nav-link">ChestXrayPredict</a></li>
+	        	<li class="nav-item"><a href="{{url_for('bothome')}}" class="nav-link">ChatBot</a></li>
+	        	<li class="nav-item"><a href="{{url_for('portal')}}" class="nav-link">E-Bazaar</a></li>
+	        	<li class="nav-item"><a href="{{url_for('ngo')}}" class="nav-link">NGO Connect</a></li>
+	        	
+	        	
+	        	
+	          
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url({{ url_for('static',filename = 'images/dashboard2.jpg')}}); ">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+          	<span class="subheading">Welcome to Dr. COVID AI</span>
+            <h1 class="mb-4">Stay Home Save Lifes</h1>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url({{ url_for('static',filename = 'images/dashboard1.jpg')}});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+          	<span class="subheading">Safety isn't expensive, it's priceless</span>
+            <h1 class="mb-4">Clean Hands are Safe Hands</h1>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-md-5 order-md-last wrap-about align-items-stretch">
+						<div class="wrap-about-border ftco-animate">
+							<div class="img" style="background-image: url({{ url_for('static',filename = 'images/stageImg/mask-detection.jpg')}}); border"></div>
+							<div class="text">
+								<h3>Autonomous Mask Detection System</h3>
+								<p>Coronavirus disease 2019 also known as COVID-19 is a respiratory illness that can spread from human to human.The transmission can be mainly due to: Close contact with infected people. Hence, Mask wearing is essential after Lockdown gets over.</p>
+								<p>System can detect presence of people not wearing masks in public places and notifying the authorities.</p>
+								<p><a href="#" class="btn btn-primary py-3 px-4">Go to App</a></p>
+								<!-- link should add here -->
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+          	<h2 class="mb-4">Our Main Features</h2>
+						<p>Our Web-App provides its user with a wide-range of solution to problems during this pandemic. All these solutions are integrated into one platform for easy access for the user.
+						</p>
+						<div class="row mt-5">
+							<div class="col-lg-6">
+								<div class="services text-center">
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></div>
+									<div class="text media-body">
+										<h3>Stage 1</h3>
+										<p>Diagnostic Screening Test COVID-19.</p>
+									</div>
+								</div>
+								<div class="services text-center">
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+									<div class="text media-body">
+										<h3>Stage 3</h3>
+										<p>X-Ray monitoring of COVID-19 positive cases.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services text-center">
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"></span><span class="flaticon-collaboration"></span></div>
+									<div class="text media-body">
+										<h3>Stage 2</h3>
+										<p>Pool Allocation and Testing based on Location.</p>
+									</div>
+								</div>
+								<div class="services text-center">
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+									<div class="text media-body">
+										<h3>Stage 4</h3>
+										<p>NGO connect portal for unprivileged people.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-intro ftco-no-pb img" style="background-image: url({{ url_for('static',filename = 'images/bg_3.jpg')}});">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0">COVID-19 Live Counter</h2>
+          </div>
+        </div>	
+    	</div>
+    </section>
+
+		<section class="ftco-counter" id="section-counter">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="wrapper">
+    				<h2 class="mb-4" style="margin-left:40%;">World Cases</h2>
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var1}}">0</strong>
+		                <span>Total Confirmed</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var2}}">0</strong>
+		                <span>New Confirmed</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var3}}">0</strong>
+		                <span>Death Toll</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var4}}">0</strong>
+		                <span>New Deaths</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+<section class="ftco-counter" id="section-counter">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="wrapper">
+    				<h2 class="mb-4" style="margin-left:41%;">India Cases</h2>
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var5}}">0</strong>
+		                <span>Total Confirmed</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var6}}">0</strong>
+		                <span>New Confirmed</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var7}}">0</strong>
+		                <span>Active Cases</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		            	<div class="icon"><span class="flaticon-doctor"></span></div>
+		              <div class="text">
+		                <strong class="number" data-number="{{var8}}">0</strong>
+		                <span>Total Recovered</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4">Our Best Services</h2>
+          </div>
+        </div>
+				<div class="row no-gutters">
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 noborder-left text-center ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+							<div class="text media-body">
+								<h3>Stage 1</h3>
+								<p>COVID Prediction by a survey. This will indicate whether a person must go for Stage 2 Test or not.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 text-center ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-business"></span></div>
+							<div class="text media-body">
+								<h3>Stage 2</h3>
+								<p>COVID Detection using Pooled Blood Test. Blood Test in pools of 32/64 Patients at once can speed up the testing process exponentially using a limited set of resources.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 text-center ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-insurance"></span></div>
+							<div class="text media-body">
+								<h3>Chest X-ray</h3>
+								<p>COVID Fighting using automatic X-ray Classification. This will comprise the continuous and comprehensive evaluation of patient under treatment until the patient is declared Corona free.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 noborder-left noborder-bottom text-center ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-money"></span></div>
+							<div class="text media-body">
+								<h3>E-Bazar</h3>
+								<p>The portal will help users view the inventory items for purchase and add products to their cart which will be then delivered to them.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 text-center noborder-bottom ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-rating"></span></div>
+							<div class="text media-body">
+								<h3>NGO Connect</h3>
+								<p>Indian Citizens can share details of those needing food/shelter so that the nearest NGOs and Social Welfare Associations can get in touch with the needy. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 d-flex">
+						<div class="services-2 text-center noborder-bottom ftco-animate">
+							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+							<div class="text media-body">
+								<h3>Chatbot</h3>
+								<p>Patients under quarantine can interact with the chatbot and gain general knowledge about the current situation along with periodic reminders of medications and health tips.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-intro ftco-no-pb img" style="background-image: url({{ url_for('static',filename = 'images/bg_1.jpg')}});">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-lg-9 col-md-8 d-flex align-items-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-3 mb-md-0">You Always Get the Best Exprience</h2>
+          </div>
+          <div class="col-lg-3 col-md-4 ftco-animate">
+          	<p class="mb-0"><a href="#" class="btn btn-white py-3 px-4">Home</a></p>
+          </div>
+        </div>	
+    	</div>
+    </section>
+
+		<section class="ftco-section ftco-no-pb">
+			<div class="container-fluid px-0">
+				<div class="row no-gutters justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-4">Our Complete End-to-End Solution</h2>
+            <p>An End-to-End Solution To Predict, Detect And Fight Coronavirus Disease And Global Pandemic</p>
+            <p></p>
+          </div>
+        </div>
+				<div class="row no-gutters">
+    			<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/stage1.jpg')}});">
+    					
+    				</div>
+  				</div>
+  				<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/stage2.jpg')}});">
+    					
+    				</div>
+  				</div>
+
+    			<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/Chatbot.jpg')}});">
+    					
+    				</div>
+    			</div>
+					<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/ngo-donate.png')}});">
+    					
+    				</div>
+  				</div>
+  				<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/e-commerce.png')}});">
+    					
+    				</div>
+  				</div>
+  				<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/googlemap.jpg')}});">
+    					
+    				</div>
+  				</div>
+  				<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/x-ray.jpg')}});">
+    					
+    				</div>
+  				</div>
+  				<div class="col-md-3">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{ url_for('static',filename = 'images/stageImg/mask.jpg')}});">
+    					
+    				</div>
+  				</div>
+    		</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url({{ url_for('static',filename = 'images/bg_5.jpg')}});" data-stellar-background-ratio="0.5">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-end">
+    			<div class="col-md-6 py-5 px-md-5">
+    				<div class="py-md-5">
+		          <div class="heading-section heading-section-white ftco-animate mb-5">
+		            <h2 class="mb-4">Register Hospital</h2>
+		            <p>Only Hospitals who have Registered with the Government of India for right over COVID19 cases can register.</p>
+		          </div>
+		          <form action="#" class="appointment-form ftco-animate">
+		    				<div class="d-md-flex">
+			    				<div class="form-group">
+			    					<input type="text" class="form-control" placeholder="Hospital Name">
+			    				</div>
+			    				<div class="form-group ml-md-4">
+			    					<input type="text" class="form-control" placeholder="SSN No.">
+			    				</div>
+		    				</div>
+		    				<div class="d-md-flex">
+		    					<div class="form-group">
+			    					<div class="form-field">
+		        					<div class="select-wrap">
+		                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                    <select name="" id="" class="form-control">
+		                    	<option value="">Select Location</option>
+		                      <option value="">Powai</option>
+		                      <option value="">Mumbai</option>
+		                      <option value="">Thane</option>
+		                      <option value="">Navi Mumbai</option>
+		                      <option value="">ChurchGate</option>
+		                    </select>
+		                  </div>
+			              </div>
+			    				</div>
+		    					<div class="form-group ml-md-4">
+			    					<input type="text" class="form-control" placeholder="Phone">
+			    				</div>
+		    				</div>
+		    				<div class="d-md-flex">
+		    					<div class="form-group">
+			              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Available No. Beds"></textarea>
+			            </div>
+			            <div class="form-group ml-md-4">
+			              <input type="submit" value="Register Hospital" class="btn btn-white py-3 px-4">
+			            </div>
+		    				</div>
+		    			</form>
+		    		</div>
+    			</div>
+        </div>
+    	</div>
+    </section>
+
+		<!-- here was one section 
+
+		<section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4">Team Pyrocrats</h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_1.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Shreyas Labhsetwar</p>
+                    <span class="position">Data Scientist</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_2.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Soumya Haridas</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_3.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Riyali Panmand</p>
+                    <span class="position">UI/UX designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_4.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Rutuja Deshpande</p>
+                    <span class="position">UI/UX designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_1.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Raj Salvi</p>
+                    <span class="position">Data Scientist</span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_1.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Piyush Kolte</p>
+                    <span class="position">UI/UX designer</span>
+                  </div>
+                </div>
+              </div>
+               <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_1.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Veerasai Subramaniam</p>
+                    <span class="position">Full Stack Web Developer</span>
+                  </div>
+                </div>
+              </div>
+               <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img" style="background-image: url({{ url_for('static',filename = 'images/person_1.jpg')}})">
+                  </div>
+                  <div class="text pl-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>We are Computer Engineering Under Graduate from Fr. Rodrigues Institute of Technology.</p>
+                    <p class="name">Alistair Baretto</p>
+                    <span class="position">Data Scientist</span>
+                  </div>
+                </div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	-->	
+    
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename = 'js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/popper.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/aos.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/scrollax.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/google-map.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/main.js')}}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Screening Section</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/open-iconic-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/animate.css')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/magnific-popup.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/aos.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/ionicons.min.css')}}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css')}}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"><title>React App</title><link href="/static/screeningtool/css/main.a11c00b5.chunk.css" rel="stylesheet">
+    <style type="text/css">
+
+        body{
+            /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ url_for('static', filename='images/pooling/back.jpg')}});*/
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .results {
+            background: rgba(44,62,80,0.7);
+            width: 700px;
+            height: auto;
+            text-align: center;
+            font-family: Century Gothic;
+            font-size: 15px;
+        }
+
+        p {
+            color: #fff;
+        }
+
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div class="bg-top navbar-light" style="background-color: oldlace;">
+        <div class="container">
+            <div class="row no-gutters d-flex align-items-center align-items-stretch">
+                <div class="col-md-4 d-flex align-items-center py-4">
+                    <a class="navbar-brand" href="index.html">Dr. CovidAI</a>
+                </div>
+                <div class="col-lg-8 d-block">
+                    <div class="row d-flex">
+                        <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                            <div class="text">
+                                <span>Email</span>
+                                <span>youremail@email.com</span>
+                            </div>
+                        </div>
+                        <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                            <div class="text">
+                                <span>Call</span>
+                                <span>Call Us: + 1235</span>
+                            </div>
+                        </div>
+                        <div class="col-md topper d-flex align-items-center justify-content-end">
+                            <p class="mb-0 d-block">
+                                <a href="{{url_for('login')}}" class="btn py-2 px-3 btn-primary">
+                                    <span>Login</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md topper d-flex align-items-center justify-content-end">
+                            <p class="mb-0 d-block">
+                                <a href="{{url_for('register')}}" class="btn py-2 px-3 btn-primary">
+                                    <span>Register</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+      <nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+          <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" placeholder="Search">
+            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+          </div>
+        </form>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a href="{{url_for('home')}}" class="nav-link pl-0">Home</a></li>
+                <li class="nav-item"><a href="{{url_for('screeningtool')}}" class="nav-link">Screening Tool</a></li>
+                <li class="nav-item"><a href="{{url_for('pooling')}}" class="nav-link">Pooled Blood Test</a></li>
+                <li class="nav-item"><a href="/static/covidpredict.html" class="nav-link">ChestXrayPredict</a></li>
+                <li class="nav-item"><a href="{{url_for('bothome')}}" class="nav-link">ChatBot</a></li>
+                <li class="nav-item"><a href="{{url_for('portal')}}" class="nav-link">E-Bazaar</a></li>
+                <li class="nav-item"><a href="{{url_for('ngo')}}" class="nav-link">NGO Connect</a></li>
+                <li class="nav-item"><a href="{{url_for('detectmask')}}" class="nav-link">Mask detection</a></li>
+                
+                
+                
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- END nav -->
+<section class="ftco-intro ftco-no-pb img" style="background-image: url({{ url_for('static',filename = 'images/bg_3.jpg')}});">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0">Stage 1: Diagnostic Screening Test COVID-19</h2>
+          </div>
+        </div>  
+        </div>
+    </section>
+
+        
+
+<section class="ftco-counter" id="section-counter">
+        <div class="container">
+            <div class="row d-md-flex align-items-center justify-content-center">
+                <div class="wrapper">
+                    <h2 class="mb-4" style=" margin: 0 12%">Screening Test :</h2>
+            <div id="root">
+          </div>
+        </div>
+        </div>
+    </section>
+        
+    
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename = 'js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/popper.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.stellar.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/aos.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/scrollax.min.js')}}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ url_for('static',filename = 'js/google-map.js')}}"></script>
+  <script src="{{ url_for('static',filename = 'js/main.js')}}"></script>
+  <script>!function(e){function r(r){for(var n,a,l=r[0],p=r[1],f=r[2],c=0,s=[];c<l.length;c++)a=l[c],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in p)Object.prototype.hasOwnProperty.call(p,n)&&(e[n]=p[n]);for(i&&i(r);s.length;)s.shift()();return u.push.apply(u,f||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,l=1;l<t.length;l++){var p=t[l];0!==o[p]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/";var l=this.webpackJsonpflaskreactapp=this.webpackJsonpflaskreactapp||[],p=l.push.bind(l);l.push=r,l=l.slice();for(var f=0;f<l.length;f++)r(l[f]);var i=p;t()}([])</script><script src="/static/screeningtool/js/2.efc7856d.chunk.js"></script><script src="/static/screeningtool/js/main.9bd40241.chunk.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+	<title>Dr. CovidAI</title>
+	
+
+	<style>
+		body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.jumbotron{
+	margin-top: 10%;
+    filter: background-blur(25px); 
+    background-color: rgba(0 ,0 ,0 ,0.7); 
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 3px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 8%;
+    color: white;
+}
+
+
+</style>
+</head>
+
+<body>
+	<!--style="background-image: url('ima2.jpeg')"-->
+	<div class="bg-top navbar-light" style="background-color: oldlace;">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="index.html">Dr. CovidAI</a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text">
+					    		<span>Email</span>
+						    	<span>youremail@email.com</span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <div class="text">
+						    	<span>Call</span>
+						    	<span>Call Us: + 1235</span>
+						    </div>
+					    </div>
+					    <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0 d-block">
+					    		<a href="http://127.0.0.1:5000/home" class="btn py-2 px-3 btn-primary">
+					    			<span>Logout</span>
+					    		</a>
+					    	</p>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" placeholder="Search">
+            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+          </div>
+        </form>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item active"><a href="http://127.0.0.1:5000/home" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item"><a href="http://127.0.0.1:5000/screeningtool" class="nav-link">Screening Tool</a></li>
+	        	<li class="nav-item"><a href="http://127.0.0.1:5000/pooling" class="nav-link">Pooled Blood Test</a></li>
+	        	<li class="nav-item"><a href="/static/covidpredict.html" class="nav-link">ChestXrayPredict</a></li>
+	        	<li class="nav-item"><a href="http://127.0.0.1:5000/bothome" class="nav-link">ChatBot</a></li>
+	        	<li class="nav-item"><a href="http://127.0.0.1:5000/portal" class="nav-link">E-Bazaar</a></li>
+	        	<li class="nav-item"><a href="http://127.0.0.1:5000/ngo" class="nav-link">NGO Connect</a></li>
+	        	
+	        	
+	        	
+	          
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+
+	<main role="main">
+		<div class="container">
+		<div class="jumbotron">
+  	<div class="row" >
+  		
+    <div class="col-md-4" style="margin-left: 34%;">
+    <br><br><br><br>
+    <center>
+
+	<label for="image-selector" class="custom-file-upload">
+    <i class="fa fa-cloud-upload" ></i><button >Custom Upload</button>
+    </label>
+    <input id="image-selector" type="file"/>
+	<br><button  id="predict-button" class="predict-button btn btn-success btn-lg" style="margin-top: 10%;" >Predict</button>
+	<p style="font-weight:bold; color: white;" >Predictions </p>
+	<p style="color: white">CoronaVirus Positive : <span id="pepper-prediction" ></span></p>
+	<p style="color: white">CoronaVirus Negative : <span id="tomato-prediction"></span></p>
+	<img id="selected-img" src="#"  />	
+	</center>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		let base64Image;
+		function readURL(input) {
+    		if (input.files && input.files[0]) {
+				let reader = new FileReader();
+				reader.onload=function(e){
+					let dataURL=reader.result;
+					 $('#selected-img').attr('src', e.target.result);
+					base64Image = dataURL.replace('data:image/jpeg;base64,','');
+										}
+			reader.readAsDataURL(input.files[0]);
+
+			$("#pepper-prediction").text("");
+			$("#tomato-prediction").text("");
+		}}		
+
+		
+		$("#image-selector").change(function(){
+    readURL(this);
+});
+
+		$("#predict-button").click(function(event){
+			let message={
+				image: base64Image
+			}
+			//console.log(message.image);
+			$.post("http://127.0.0.1:5000/covidpredict",JSON.stringify(message),function(response){
+				var obj=JSON.parse(response);
+				var a = obj[0].toFixed(0);
+				var b = obj[1].toFixed(0);
+				var pp;
+				var tp;
+				if(a ==1 ){
+					pp = 'Yes';
+					tp = 'No';
+				}
+				else{
+					tp = 'Yes';
+					pp='No';
+				}
+				$("#pepper-prediction").text(pp);
+				$("#tomato-prediction").text(tp);
+				console.log(response);
+			});
+		});
+
+	</script>
+    </div>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>

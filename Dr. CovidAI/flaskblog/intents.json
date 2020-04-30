@@ -1,0 +1,59 @@
+{"intents": [
+
+	{"tag": "greetings", 
+	"patterns": ["hi", "hello", "hey", "What's up"],
+	"responses": ["Hii, Dr.COVID_AI here"],
+	"context_set": ""
+	},
+
+	{"tag": "bored", 
+	"patterns": ["bored", "boring", "don't have anything to do", "show me something"],
+	"responses": ["What kind of things you like to do?\n 1.Games \n 2.Music \n 3.Books \n 4.Movies \n 5.Anime"],
+	"context_set": ""
+	},
+
+	{"tag": "games", 
+	"patterns": ["Games", "games"],
+	"responses": ["click here to play games \n https://www.bgames.com/multiplayer-games/"],
+	"context_set": ""
+	},
+
+	{"tag": "music", 
+	"patterns": ["Music", "music"],
+	"responses": ["Click to listen music \n https://open.spotify.com/"],
+	"context_set": ""
+	},
+
+	{"tag": "books", 
+	"patterns": ["Books", "books"],
+	"responses": ["Click to read Books \n https://openlibrary.org/"],
+	"context_set": ""
+	},
+
+	{"tag": "movies", 
+	"patterns": ["Movies", "movies"],
+	"responses": ["Click to watch movies \n https://speedytv.com/"],
+	"context_set": ""
+	},
+
+	{"tag": "anime", 
+	"patterns": ["Anime", "anime"],
+	"responses": ["Click to watch anime \n https://www17.gogoanime.io/"],
+	"context_set": ""
+	},
+
+	{"tag": "depression", 
+	"patterns": ["sad", "cry", "don't know", "headache", "nothing", "empty", "emptiness", "lonely"],
+	"responses": ["Don't be Depressed. Everything is gonna alright. Believe in yourself. \n You can do it. \n Feel free and call your loved ones"],
+	"context_set": ""
+	},
+
+	{"tag": "greetings", 
+	"patterns": ["hi", "hello", "hey", "What's up"],
+	"responses": ["Hii, Dr.COVID_AI here"],
+	"context_set": ""
+	}
+
+	]
+
+}
